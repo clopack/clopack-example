@@ -58,8 +58,8 @@
                                 my-actions)
         ctx (cn/create-context my-interface) ]
     (if-not (nil? handler)
-      (future (in-handler handler)))
-      (printf "failed to open packet handler on %s\n" my-interface)
+      (future (in-handler handler))
+      (printf "failed to open packet handler on %s\n" my-interface))
     (if-not (nil? ctx)
       (out-handler ctx "tanel" "oliver")
       (printf "failed to open packet writer on %s\n", my-interface))))
